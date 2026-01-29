@@ -46,19 +46,19 @@ export const Header: React.FC = () => {
     const navItems: { label: string; href: string; hasMegaMenu?: boolean; hasDropdown?: boolean }[] = [
         { label: 'Home', href: '/' },
         { label: 'About Us', href: '/about' },
-        { label: 'Hospitality Supplies', href: '/hospitality-supplies', hasDropdown: true },
+        { label: 'Hotel Supplies', href: '/hospitality-supplies', hasDropdown: true },
         { label: 'Engineering Solutions', href: '/engineering-solutions' },
         { label: 'Contact', href: '/contact' },
     ];
 
     return (
-        <header className="bg-white border-b border-neutral-200 sticky top-0 z-50 shadow-sm">
+        <header className="bg-black border-b border-neutral-800 sticky top-0 z-50 shadow-sm">
             <div className="container mx-auto">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     {/* Logo - Added margin right to strictly separate from nav */}
                     <Link href="/" className="flex items-center mr-4 lg:mr-8 flex-shrink-0">
-                        <div className="text-2xl font-extrabold text-primary-600 tracking-tight">
+                        <div className="text-2xl font-extrabold text-white tracking-tight">
                             StepVision
                         </div>
                     </Link>
@@ -81,7 +81,7 @@ export const Header: React.FC = () => {
                             >
                                 <Link
                                     href={item.href}
-                                    className="text-neutral-600 hover:text-primary-600 text-[11px] xl:text-xs font-bold uppercase tracking-widest transition-colors whitespace-nowrap"
+                                    className="text-neutral-300 hover:text-white text-[11px] xl:text-xs font-bold uppercase tracking-widest transition-colors whitespace-nowrap"
                                 >
                                     {item.label}
                                 </Link>
@@ -130,7 +130,7 @@ export const Header: React.FC = () => {
                                     <div className="absolute left-1/2 transform -translate-x-1/2 top-full pt-4 w-screen max-w-6xl">
                                         <div className="bg-white border border-neutral-200 rounded-lg shadow-xl p-8">
                                             <h3 className="text-lg font-bold text-neutral-900 mb-4">
-                                                Hospitality Categories
+                                                Hotel Supply Categories
                                             </h3>
                                             <div className="grid grid-cols-3 gap-6">
                                                 {hospitalityCategories.map((category) => (
@@ -216,7 +216,7 @@ export const Header: React.FC = () => {
                                         <div>
                                             <button
                                                 onClick={() => setIsMobileHospitalityOpen(!isMobileHospitalityOpen)}
-                                                className="w-full text-left text-neutral-700 hover:text-primary-600 font-medium px-4 py-2 flex items-center justify-between"
+                                                className="w-full text-left text-neutral-300 hover:text-white font-medium px-4 py-2 flex items-center justify-between"
                                             >
                                                 <span>{item.label}</span>
                                                 <ChevronDown
@@ -229,7 +229,7 @@ export const Header: React.FC = () => {
                                                         <Link
                                                             key={category.id}
                                                             href={`/products/${category.slug}`}
-                                                            className="block text-neutral-600 hover:text-primary-600 text-sm px-8 py-2"
+                                                            className="block text-neutral-400 hover:text-white text-sm px-8 py-2"
                                                             onClick={() => {
                                                                 setIsMobileMenuOpen(false);
                                                                 setIsMobileHospitalityOpen(false);
@@ -244,7 +244,7 @@ export const Header: React.FC = () => {
                                     ) : (
                                         <Link
                                             href={item.href}
-                                            className="text-neutral-700 hover:text-primary-600 font-medium px-4 py-2 block"
+                                            className="text-neutral-300 hover:text-white font-medium px-4 py-2 block"
                                             onClick={() => setIsMobileMenuOpen(false)}
                                         >
                                             {item.label}
