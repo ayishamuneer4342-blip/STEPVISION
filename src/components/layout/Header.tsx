@@ -53,19 +53,18 @@ export const Header: React.FC = () => {
 
     return (
         <header className="bg-black border-b border-neutral-800 sticky top-0 z-50 shadow-sm">
-            <div className="container mx-auto">
-                <div className="flex items-center justify-between h-16">
+            <div className="container mx-auto px-4 max-w-[1400px]">
+                <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     {/* Logo - Added margin right to strictly separate from nav */}
-                    <Link href="/" className="flex items-center mr-4 lg:mr-8 flex-shrink-0">
-                        <div className="text-2xl font-extrabold text-white tracking-tight">
+                    <Link href="/" className="flex items-center flex-shrink-0">
+                        <div className="text-3xl font-extrabold text-white tracking-tight">
                             StepVision
                         </div>
                     </Link>
 
                     {/* Desktop Navigation */}
-                    {/* Desktop Navigation */}
-                    <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+                    <nav className="hidden lg:flex items-center space-x-8 ml-auto">
                         {navItems.map((item) => (
                             <div
                                 key={item.label}
@@ -81,7 +80,7 @@ export const Header: React.FC = () => {
                             >
                                 <Link
                                     href={item.href}
-                                    className="text-neutral-300 hover:text-white text-[11px] xl:text-xs font-bold uppercase tracking-widest transition-colors whitespace-nowrap"
+                                    className="text-white hover:text-primary-400 text-sm font-semibold uppercase tracking-wide transition-colors whitespace-nowrap"
                                 >
                                     {item.label}
                                 </Link>
@@ -172,7 +171,7 @@ export const Header: React.FC = () => {
                     </nav>
 
                     {/* CTAs */}
-                    <div className="hidden lg:flex items-center space-x-3 ml-4 flex-shrink-0">
+                    <div className="hidden lg:flex items-center space-x-3 ml-6 flex-shrink-0">
                         <Link href="/request-catalogue">
                             <Button variant="outline" size="sm">
                                 <FileText className="w-3.5 h-3.5 mr-1.5" />
