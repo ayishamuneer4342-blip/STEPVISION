@@ -53,7 +53,7 @@ export const Header: React.FC = () => {
 
     return (
         <header className="bg-black border-b border-neutral-800 sticky top-0 z-50 shadow-sm">
-            <div className="container mx-auto px-4 max-w-[1400px]">
+            <div className="w-full px-6 lg:px-8 max-w-[1600px] mx-auto">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     {/* Logo - Added margin right to strictly separate from nav */}

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Breadcrumb } from '@/components/Breadcrumb';
-import { CheckCircle, Building2, Users, Wrench, Package, Hotel, Utensils } from 'lucide-react';
+import { CheckCircle, Building2, Users, Wrench, Package, Hotel, Utensils, Award, Globe, Clock, Shield } from 'lucide-react';
 
 export default function AboutPage() {
     return (
         <div className="min-h-screen bg-neutral-50">
-            <div className="container mx-auto py-8">
+            <div className="w-full px-6 lg:px-8 max-w-[1600px] mx-auto py-8">
                 <Breadcrumb
                     items={[
                         { label: 'About Us' },
@@ -13,72 +13,128 @@ export default function AboutPage() {
                 />
 
                 {/* Hero Section */}
-                <div className="mb-12">
-                    <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
+                <div className="mb-16">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-8 text-center">
                         StepVision Hotel and Engineering Supplies
                     </h1>
-                    <div className="bg-white rounded-lg shadow-sm p-8 md:p-10">
-                        <p className="text-lg md:text-xl text-neutral-700 leading-relaxed mb-4">
+                    <div className="bg-white rounded-xl shadow-md p-8 md:p-12 max-w-5xl mx-auto">
+                        <p className="text-lg md:text-xl text-neutral-700 leading-relaxed mb-6 text-center">
                             Being part of <span className="font-semibold text-primary-600">StepVision International Group</span>,
-                            We are a UAE-based hospitality supply partner delivering both operational products and engineering
-                            solutions for hotels, resorts, and serviced apartments all over Middle East and Africa.
+                            we are a UAE-based hospitality supply partner delivering both operational products and engineering
+                            solutions for hotels, resorts, and serviced apartments all over the Middle East and Africa.
                         </p>
-                        <p className="text-lg md:text-xl text-neutral-700 leading-relaxed">
+                        <p className="text-lg md:text-xl text-neutral-700 leading-relaxed text-center">
                             Hotels choose us because we combine industry-leading hospitality supplies with engineering products
                             that keep operations running smoothly.
                         </p>
                     </div>
                 </div>
 
+                {/* Our Commitment Section */}
+                <div className="mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8 text-center">
+                        Our Commitment to Excellence
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                        <div className="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
+                            <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <Award className="w-8 h-8 text-primary-600" />
+                            </div>
+                            <h3 className="text-lg font-bold text-neutral-900 mb-2">
+                                Quality Assured
+                            </h3>
+                            <p className="text-sm text-neutral-600">
+                                Premium products meeting international standards
+                            </p>
+                        </div>
+
+                        <div className="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
+                            <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <Clock className="w-8 h-8 text-primary-600" />
+                            </div>
+                            <h3 className="text-lg font-bold text-neutral-900 mb-2">
+                                Fast Delivery
+                            </h3>
+                            <p className="text-sm text-neutral-600">
+                                Quick turnaround times across the region
+                            </p>
+                        </div>
+
+                        <div className="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
+                            <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <Globe className="w-8 h-8 text-primary-600" />
+                            </div>
+                            <h3 className="text-lg font-bold text-neutral-900 mb-2">
+                                Regional Expertise
+                            </h3>
+                            <p className="text-sm text-neutral-600">
+                                Deep understanding of Middle East & Africa markets
+                            </p>
+                        </div>
+
+                        <div className="bg-white rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
+                            <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                                <Shield className="w-8 h-8 text-primary-600" />
+                            </div>
+                            <h3 className="text-lg font-bold text-neutral-900 mb-2">
+                                Trusted Partner
+                            </h3>
+                            <p className="text-sm text-neutral-600">
+                                Reliable support for your operations
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Trusted by Multiple Hotel Departments */}
-                <div className="mb-12">
-                    <h2 className="text-3xl font-bold text-neutral-900 mb-6">
+                <div className="mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8 text-center">
                         Trusted by Multiple Hotel Departments
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-shadow">
                             <div className="flex items-start space-x-4">
-                                <div className="bg-primary-100 rounded-lg p-3">
-                                    <Wrench className="w-6 h-6 text-primary-600" />
+                                <div className="bg-primary-100 rounded-lg p-3 flex-shrink-0">
+                                    <Wrench className="w-7 h-7 text-primary-600" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-neutral-900 mb-2">
+                                    <h3 className="text-xl font-bold text-neutral-900 mb-3">
                                         Engineering Teams
                                     </h3>
-                                    <p className="text-neutral-600">
-                                        Fast delivery of technical products
+                                    <p className="text-neutral-600 leading-relaxed">
+                                        Fast delivery of technical products to keep your facilities running at peak performance
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+                        <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-shadow">
                             <div className="flex items-start space-x-4">
-                                <div className="bg-primary-100 rounded-lg p-3">
-                                    <Package className="w-6 h-6 text-primary-600" />
+                                <div className="bg-primary-100 rounded-lg p-3 flex-shrink-0">
+                                    <Package className="w-7 h-7 text-primary-600" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-neutral-900 mb-2">
+                                    <h3 className="text-xl font-bold text-neutral-900 mb-3">
                                         Procurement Teams
                                     </h3>
-                                    <p className="text-neutral-600">
-                                        Vendor consolidation & compliance
+                                    <p className="text-neutral-600 leading-relaxed">
+                                        Vendor consolidation & compliance support to streamline your supply chain
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow-sm p-6 hover:shadow-md transition-shadow">
+                        <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-shadow">
                             <div className="flex items-start space-x-4">
-                                <div className="bg-primary-100 rounded-lg p-3">
-                                    <Hotel className="w-6 h-6 text-primary-600" />
+                                <div className="bg-primary-100 rounded-lg p-3 flex-shrink-0">
+                                    <Hotel className="w-7 h-7 text-primary-600" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-neutral-900 mb-2">
+                                    <h3 className="text-xl font-bold text-neutral-900 mb-3">
                                         Hotel Management
                                     </h3>
-                                    <p className="text-neutral-600">
-                                        Operational reliability & uptime
+                                    <p className="text-neutral-600 leading-relaxed">
+                                        Operational reliability & uptime ensuring seamless guest experiences
                                     </p>
                                 </div>
                             </div>
@@ -87,97 +143,139 @@ export default function AboutPage() {
                 </div>
 
                 {/* Why Choose Us */}
-                <div className="mb-12">
-                    <h2 className="text-3xl font-bold text-neutral-900 mb-6">
+                <div className="mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8 text-center">
                         Why Choose Us
                     </h2>
-                    <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-lg shadow-lg p-8 md:p-10 text-white">
-                        <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                    <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl shadow-xl p-10 md:p-14 text-white max-w-5xl mx-auto">
+                        <h3 className="text-3xl md:text-4xl font-bold mb-4 text-center">
                             One Supplier — Multiple Needs
                         </h3>
-                        <p className="text-lg mb-6 text-primary-50">
-                            Reduce vendor count and simplify procurement with a partner who supports:
+                        <p className="text-lg md:text-xl mb-10 text-primary-50 text-center max-w-3xl mx-auto">
+                            Reduce vendor count and simplify procurement with a partner who supports all your hospitality needs:
                         </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div className="flex items-center space-x-3">
-                                <CheckCircle className="w-6 h-6 text-primary-200 flex-shrink-0" />
-                                <span className="text-lg">Engineering products</span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                            <div className="flex items-center space-x-4 bg-white/10 rounded-lg p-4">
+                                <CheckCircle className="w-7 h-7 text-primary-200 flex-shrink-0" />
+                                <span className="text-lg font-medium">Engineering products</span>
                             </div>
-                            <div className="flex items-center space-x-3">
-                                <CheckCircle className="w-6 h-6 text-primary-200 flex-shrink-0" />
-                                <span className="text-lg">Hospitality supplies</span>
+                            <div className="flex items-center space-x-4 bg-white/10 rounded-lg p-4">
+                                <CheckCircle className="w-7 h-7 text-primary-200 flex-shrink-0" />
+                                <span className="text-lg font-medium">Hospitality supplies</span>
                             </div>
-                            <div className="flex items-center space-x-3">
-                                <CheckCircle className="w-6 h-6 text-primary-200 flex-shrink-0" />
-                                <span className="text-lg">F&B & kitchen essentials</span>
+                            <div className="flex items-center space-x-4 bg-white/10 rounded-lg p-4">
+                                <CheckCircle className="w-7 h-7 text-primary-200 flex-shrink-0" />
+                                <span className="text-lg font-medium">F&B & kitchen essentials</span>
                             </div>
-                            <div className="flex items-center space-x-3">
-                                <CheckCircle className="w-6 h-6 text-primary-200 flex-shrink-0" />
-                                <span className="text-lg">Project & operations solutions</span>
+                            <div className="flex items-center space-x-4 bg-white/10 rounded-lg p-4">
+                                <CheckCircle className="w-7 h-7 text-primary-200 flex-shrink-0" />
+                                <span className="text-lg font-medium">Project & operations solutions</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 {/* Industries Served */}
-                <div className="mb-12">
-                    <h2 className="text-3xl font-bold text-neutral-900 mb-6">
-                        Industries Served
+                <div className="mb-16">
+                    <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8 text-center">
+                        Industries We Serve
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                        <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600 hover:shadow-md transition-shadow">
                             <div className="flex items-center space-x-3 mb-2">
-                                <Hotel className="w-5 h-5 text-primary-600" />
+                                <Hotel className="w-6 h-6 text-primary-600" />
                                 <h3 className="text-lg font-semibold text-neutral-900">
                                     Hotels & Resorts
                                 </h3>
                             </div>
+                            <p className="text-sm text-neutral-600 mt-2">
+                                Comprehensive supply solutions for luxury and boutique properties
+                            </p>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600">
+                        <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600 hover:shadow-md transition-shadow">
                             <div className="flex items-center space-x-3 mb-2">
-                                <Building2 className="w-5 h-5 text-primary-600" />
+                                <Building2 className="w-6 h-6 text-primary-600" />
                                 <h3 className="text-lg font-semibold text-neutral-900">
                                     Serviced Apartments
                                 </h3>
                             </div>
+                            <p className="text-sm text-neutral-600 mt-2">
+                                Complete furnishing and operational supplies for extended stays
+                            </p>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600">
+                        <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600 hover:shadow-md transition-shadow">
                             <div className="flex items-center space-x-3 mb-2">
-                                <Users className="w-5 h-5 text-primary-600" />
+                                <Users className="w-6 h-6 text-primary-600" />
                                 <h3 className="text-lg font-semibold text-neutral-900">
                                     Hospitality Groups & Chains
                                 </h3>
                             </div>
+                            <p className="text-sm text-neutral-600 mt-2">
+                                Scalable solutions for multi-property operations
+                            </p>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600">
+                        <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600 hover:shadow-md transition-shadow">
                             <div className="flex items-center space-x-3 mb-2">
-                                <Wrench className="w-5 h-5 text-primary-600" />
+                                <Wrench className="w-6 h-6 text-primary-600" />
                                 <h3 className="text-lg font-semibold text-neutral-900">
                                     Facility Management Companies
                                 </h3>
                             </div>
+                            <p className="text-sm text-neutral-600 mt-2">
+                                Technical products and maintenance supplies
+                            </p>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600">
+                        <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600 hover:shadow-md transition-shadow">
                             <div className="flex items-center space-x-3 mb-2">
-                                <Utensils className="w-5 h-5 text-primary-600" />
+                                <Utensils className="w-6 h-6 text-primary-600" />
                                 <h3 className="text-lg font-semibold text-neutral-900">
                                     F&B Outlets
                                 </h3>
                             </div>
+                            <p className="text-sm text-neutral-600 mt-2">
+                                Kitchen equipment and dining essentials
+                            </p>
                         </div>
 
-                        <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600">
+                        <div className="bg-white rounded-lg shadow-sm p-6 border-l-4 border-primary-600 hover:shadow-md transition-shadow">
                             <div className="flex items-center space-x-3 mb-2">
-                                <Package className="w-5 h-5 text-primary-600" />
+                                <Package className="w-6 h-6 text-primary-600" />
                                 <h3 className="text-lg font-semibold text-neutral-900">
                                     Corporate Procurement
                                 </h3>
                             </div>
+                            <p className="text-sm text-neutral-600 mt-2">
+                                Bulk ordering and customized supply programs
+                            </p>
                         </div>
+                    </div>
+                </div>
+
+                {/* Call to Action */}
+                <div className="bg-neutral-900 rounded-xl shadow-xl p-10 md:p-14 text-center max-w-4xl mx-auto">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                        Ready to Partner with Us?
+                    </h2>
+                    <p className="text-lg text-neutral-300 mb-8 max-w-2xl mx-auto">
+                        Join the leading hotels and hospitality groups across the Middle East and Africa who trust StepVision for their supply needs.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a
+                            href="/contact"
+                            className="bg-primary-600 hover:bg-primary-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+                        >
+                            Contact Us Today
+                        </a>
+                        <a
+                            href="/request-catalogue"
+                            className="bg-white hover:bg-neutral-100 text-neutral-900 font-semibold px-8 py-3 rounded-lg transition-colors"
+                        >
+                            Request Catalogue
+                        </a>
                     </div>
                 </div>
             </div>
