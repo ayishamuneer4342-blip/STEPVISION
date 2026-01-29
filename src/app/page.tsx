@@ -22,7 +22,7 @@ export default function HomePage() {
       <section className="py-16 bg-neutral-50">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="text-center md:text-left lg:text-center">
               <h2 className="text-4xl font-bold text-neutral-900 mb-6">
                 Your Trusted Partner in Hospitality Excellence
               </h2>
@@ -37,7 +37,7 @@ export default function HomePage() {
                 and value.
               </p>
             </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-[300px] md:h-[350px] rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
                 alt="Hotel supplies showcase"
