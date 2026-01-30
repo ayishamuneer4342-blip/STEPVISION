@@ -73,15 +73,7 @@ export default function HomePage() {
       <section className="py-16 bg-gradient-to-br from-primary-50 to-secondary-50">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-24 h-24 bg-white rounded-full mb-6 p-4 shadow-sm border border-neutral-100">
-              <Image
-                src="/icons/categories/Custom & Project Solutions.png"
-                alt="Custom & Project Solutions"
-                width={64}
-                height={64}
-                className="object-contain"
-              />
-            </div>
+
             <h2 className="text-4xl font-bold text-neutral-900 mb-6">
               Custom & Project Solutions
             </h2>
