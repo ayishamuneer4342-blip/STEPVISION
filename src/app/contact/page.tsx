@@ -18,7 +18,7 @@ export default function ContactPage() {
                         Get in Touch
                     </h1>
                     <p className="text-lg text-neutral-600">
-                        Have questions about our products or need a custom quote? We're here to help.
+                        Have questions about our products or need a custom quote? We&apos;re here to help.
                         Reach out to us using the form below or contact us directly.
                     </p>
                 </div>
@@ -95,4 +95,3 @@ export default function ContactPage() {
         </div>
     );
 }
-
