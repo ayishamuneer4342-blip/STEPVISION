@@ -22,7 +22,7 @@ const slides: Slide[] = [
         id: 1,
         image: '/images/hero-banner-main.png',
         title: 'One stop solution for Hotel supplies and Engineering Products',
-        description: 'From OS&E and FF&E to Engineering spares and maintenance products — trusted by hotels in Middle East and Africa',
+        description: '',
         ctaText: 'View Products',
         ctaLink: '/products',
         secondaryCtaText: 'Contact Us',
@@ -69,7 +69,7 @@ const slides: Slide[] = [
         secondaryCtaLink: '/contact',
     },
     {
-        id: 5,
+        id: 6,
         image: '/images/hero-slide-5.png',
         title: 'Professional Kitchen Equipment',
         description: 'Top-tier cookware and tools designed for professional chefs and busy commercial kitchens.',
