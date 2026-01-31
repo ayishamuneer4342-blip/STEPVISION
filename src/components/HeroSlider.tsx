@@ -20,7 +20,7 @@ interface Slide {
 const slides: Slide[] = [
     {
         id: 1,
-        image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920',
+        image: '/images/hero-slider-dining.png',
         title: 'Premium Hotel & Hospitality Supplies',
         description: 'From tabletop elegance to back-of-house efficiency, delivering reliable, high-quality solutions for hotels and restaurants.',
         ctaText: 'View Catalogue',
@@ -40,7 +40,7 @@ const slides: Slide[] = [
     },
     {
         id: 3,
-        image: '/images/hero-slider-dining.png',
+        image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=1920',
         title: 'Elegant Tabletop & Dining',
         description: 'Curated dinnerware, glassware, and cutlery to elevate your guests\' dining experience.',
         ctaText: 'View Catalogue',
