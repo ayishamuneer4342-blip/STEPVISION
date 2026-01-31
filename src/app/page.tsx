@@ -39,8 +39,8 @@ export default function HomePage() {
             </div>
             <div className="relative h-[300px] md:h-[350px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800"
-                alt="Hotel supplies showcase"
+                src="/images/intro-split-banner.png"
+                alt="Hotel supplies and engineering tools showcase"
                 fill
                 className="object-cover"
               />
