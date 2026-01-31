@@ -40,7 +40,7 @@ const slides: Slide[] = [
     },
     {
         id: 3,
-        image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=1920',
+        image: '/images/hero-slider-dining.png',
         title: 'Elegant Tabletop & Dining',
         description: 'Curated dinnerware, glassware, and cutlery to elevate your guests\' dining experience.',
         ctaText: 'View Catalogue',
@@ -122,8 +122,8 @@ export const HeroSlider: React.FC = () => {
                         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg max-w-4xl">
                             {slide.title}
                         </h1>
-                        <p className="text-lg md:text-2xl text-neutral-200 mb-8 max-w-2xl drop-shadow-md">
-                            {slide.description}
+                        <p className="text-lg md:text-2xl text-neutral-200 mb-8 max-w-3xl drop-shadow-md">
+                            From OS&E and FF&E to Engineering spares and maintenance products — trusted by hotels in Middle East and Africa
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link href={slide.ctaLink}>
@@ -142,7 +142,8 @@ export const HeroSlider: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            ))}
+            ))
+            }
 
             {/* Navigation Arrows */}
             <button
@@ -172,6 +173,6 @@ export const HeroSlider: React.FC = () => {
                     />
                 ))}
             </div>
-        </div>
+        </div >
     );
 };
