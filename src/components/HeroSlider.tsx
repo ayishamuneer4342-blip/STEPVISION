@@ -132,9 +132,11 @@ export const HeroSlider: React.FC = () => {
                         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg max-w-4xl">
                             {slide.title}
                         </h1>
-                        <p className="text-lg md:text-2xl text-neutral-200 mb-8 max-w-3xl drop-shadow-md">
-                            {slide.description}
-                        </p>
+                        {slide.description && (
+                            <p className="text-lg md:text-2xl text-neutral-200 mb-8 max-w-3xl drop-shadow-md">
+                                {slide.description}
+                            </p>
+                        )}
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link href={slide.ctaLink}>
                                 <Button variant="primary" size="lg" className="min-w-[200px] shadow-lg hover:shadow-xl transition-all">
