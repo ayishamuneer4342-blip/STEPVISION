@@ -20,6 +20,16 @@ interface Slide {
 const slides: Slide[] = [
     {
         id: 1,
+        image: '/images/hero-banner-main.png',
+        title: 'One stop solution for Hotel supplies and Engineering Products',
+        description: 'From OS&E and FF&E to Engineering spares and maintenance products — trusted by hotels in Middle East and Africa',
+        ctaText: 'View Products',
+        ctaLink: '/products',
+        secondaryCtaText: 'Contact Us',
+        secondaryCtaLink: '/contact',
+    },
+    {
+        id: 2,
         image: '/images/hero-slide-1.png',
         title: 'Premium Hotel & Hospitality Supplies',
         description: 'From tabletop elegance to back-of-house efficiency, delivering reliable, high-quality solutions for hotels and restaurants.',
@@ -29,7 +39,7 @@ const slides: Slide[] = [
         secondaryCtaLink: '/contact',
     },
     {
-        id: 2,
+        id: 3,
         image: '/images/hero-slide-2.png',
         title: 'Reliable Engineering Solutions',
         description: 'Comprehensive engineering supplies including HVAC, electrical, plumbing, and maintenance essentials.',
@@ -39,7 +49,7 @@ const slides: Slide[] = [
         secondaryCtaLink: '/contact',
     },
     {
-        id: 3,
+        id: 4,
         image: '/images/hero-slide-3.png',
         title: 'Elegant Tabletop & Dining',
         description: 'Curated dinnerware, glassware, and cutlery to elevate your guests\' dining experience.',
@@ -49,10 +59,20 @@ const slides: Slide[] = [
         secondaryCtaLink: '/contact',
     },
     {
-        id: 4,
+        id: 5,
         image: '/images/hero-slide-4.png',
         title: 'Custom & Project Solutions',
         description: 'Bespoke furniture, project services, and custom sourcing tailored to your hospitality needs.',
+        ctaText: 'View Catalogue',
+        ctaLink: '/hospitality-supplies',
+        secondaryCtaText: 'Contact Us',
+        secondaryCtaLink: '/contact',
+    },
+    {
+        id: 5,
+        image: '/images/hero-slide-5.png',
+        title: 'Professional Kitchen Equipment',
+        description: 'Top-tier cookware and tools designed for professional chefs and busy commercial kitchens.',
         ctaText: 'View Catalogue',
         ctaLink: '/hospitality-supplies',
         secondaryCtaText: 'Contact Us',
@@ -113,7 +133,7 @@ export const HeroSlider: React.FC = () => {
                             {slide.title}
                         </h1>
                         <p className="text-lg md:text-2xl text-neutral-200 mb-8 max-w-3xl drop-shadow-md">
-                            From OS&E and FF&E to Engineering spares and maintenance products — trusted by hotels in Middle East and Africa
+                            {slide.description}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link href={slide.ctaLink}>
