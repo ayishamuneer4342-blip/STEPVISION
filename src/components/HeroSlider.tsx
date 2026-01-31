@@ -20,7 +20,7 @@ interface Slide {
 const slides: Slide[] = [
     {
         id: 1,
-        image: '/images/hero-slider-dining.png',
+        image: '/images/hero-slide-1.png',
         title: 'Premium Hotel & Hospitality Supplies',
         description: 'From tabletop elegance to back-of-house efficiency, delivering reliable, high-quality solutions for hotels and restaurants.',
         ctaText: 'View Catalogue',
@@ -30,7 +30,7 @@ const slides: Slide[] = [
     },
     {
         id: 2,
-        image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920',
+        image: '/images/hero-slide-2.png',
         title: 'Reliable Engineering Solutions',
         description: 'Comprehensive engineering supplies including HVAC, electrical, plumbing, and maintenance essentials.',
         ctaText: 'View Catalogue',
@@ -40,7 +40,7 @@ const slides: Slide[] = [
     },
     {
         id: 3,
-        image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=1920',
+        image: '/images/hero-slide-3.png',
         title: 'Elegant Tabletop & Dining',
         description: 'Curated dinnerware, glassware, and cutlery to elevate your guests\' dining experience.',
         ctaText: 'View Catalogue',
@@ -50,19 +50,9 @@ const slides: Slide[] = [
     },
     {
         id: 4,
-        image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=1920',
-        title: 'Impeccable Housekeeping Essentials',
-        description: 'Premium amenities, linens, and cleaning solutions for superior guest comfort.',
-        ctaText: 'View Catalogue',
-        ctaLink: '/hospitality-supplies',
-        secondaryCtaText: 'Contact Us',
-        secondaryCtaLink: '/contact',
-    },
-    {
-        id: 5,
-        image: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=1920',
-        title: 'Professional Kitchen Equipment',
-        description: 'Top-tier cookware and tools designed for professional chefs and busy commercial kitchens.',
+        image: '/images/hero-slide-4.png',
+        title: 'Custom & Project Solutions',
+        description: 'Bespoke furniture, project services, and custom sourcing tailored to your hospitality needs.',
         ctaText: 'View Catalogue',
         ctaLink: '/hospitality-supplies',
         secondaryCtaText: 'Contact Us',
