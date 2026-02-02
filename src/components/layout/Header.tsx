@@ -43,12 +43,24 @@ export const Header: React.FC = () => {
         setMounted(true);
     }, []);
 
-    const navItems: { label: string; href: string; hasMegaMenu?: boolean; hasDropdown?: boolean }[] = [
+    const navItems = [
         { label: 'Home', href: '/' },
         { label: 'About Us', href: '/about' },
-        { label: 'Hotel Supplies', href: '/hospitality-supplies', hasDropdown: true },
-        { label: 'Engineering Solutions', href: '/engineering-solutions' },
-        { label: 'Contact', href: '/contact' },
+        { label: 'Products', href: '#', hasDropdown: true },
+        { label: 'Our Clients', href: '/#clients' }, // Placeholder anchor
+        { label: 'Contact Us', href: '/contact' },
+    ];
+
+    const productDropdownItems = [
+        { label: 'Engineering Equipments', href: '/products/engineering-solutions' },
+        { label: 'Housekeeping Equipments', href: '/products/housekeeping-cleaning' },
+        { label: 'Banqueting', href: '/products/kitchen-catering' },
+        { label: 'F & B Solutions & Equipment', href: '/products/tabletop-dining' },
+        { label: 'Hotel Supply', href: '/hospitality-supplies' },
+        { label: 'Room Supply', href: '/products/guest-room-essentials' },
+        { label: 'Kids Area Supply', href: '/products/custom-project-solutions' },
+        { label: 'Medical Supply Equipments', href: '/products/custom-project-solutions' },
+        { label: 'Swimming Pool & Sauna Accessories', href: '/products/custom-project-solutions' },
     ];
 
     return (
@@ -56,7 +68,6 @@ export const Header: React.FC = () => {
             <div className="w-full px-6 lg:px-8 max-w-[1600px] mx-auto">
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
-                    {/* Logo - Added margin right to strictly separate from nav */}
                     <Link href="/" className="flex items-center flex-shrink-0">
                         <div className="text-3xl font-extrabold text-white tracking-tight">
                             StepVision
@@ -70,72 +81,31 @@ export const Header: React.FC = () => {
                                 key={item.label}
                                 className="relative"
                                 onMouseEnter={() => {
-                                    if (item.hasMegaMenu) setIsMegaMenuOpen(true);
                                     if (item.hasDropdown) setIsHospitalityDropdownOpen(true);
                                 }}
                                 onMouseLeave={() => {
-                                    if (item.hasMegaMenu) setIsMegaMenuOpen(false);
                                     if (item.hasDropdown) setIsHospitalityDropdownOpen(false);
                                 }}
                             >
                                 <Link
                                     href={item.href}
-                                    className="text-white hover:text-primary-400 text-sm font-semibold uppercase tracking-wide transition-colors whitespace-nowrap"
+                                    className="text-white hover:text-primary-400 text-sm font-semibold uppercase tracking-wide transition-colors whitespace-nowrap flex items-center"
                                 >
                                     {item.label}
+                                    {item.hasDropdown && <ChevronDown className="w-4 h-4 ml-1" />}
                                 </Link>
-                                {item.hasMegaMenu && isMegaMenuOpen && (
-                                    <div className="absolute left-1/2 transform -translate-x-1/2 top-full pt-4 w-screen max-w-6xl">
-                                        <div className="bg-white border border-neutral-200 rounded-lg shadow-xl p-8">
-                                            <h3 className="text-lg font-bold text-neutral-900 mb-4">
-                                                Product Categories
-                                            </h3>
-                                            <div className="grid grid-cols-3 gap-6">
-                                                {categories.map((category) => (
-                                                    <Link
-                                                        key={category.id}
-                                                        href={`/products/${category.slug}`}
-                                                        className="group"
-                                                        onClick={() => setIsMegaMenuOpen(false)}
-                                                    >
-                                                        <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-neutral-50 transition-colors">
-                                                            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 border border-neutral-200 p-1">
-                                                                <Image
-                                                                    src={getCategoryIcon(category.name)}
-                                                                    alt={category.name}
-                                                                    width={32}
-                                                                    height={32}
-                                                                    className="object-contain"
-                                                                />
-                                                            </div>
-                                                            <div>
-                                                                <h4 className="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">
-                                                                    {category.name}
-                                                                </h4>
-                                                                {category.subcategories && (
-                                                                    <p className="text-xs text-neutral-500 mt-1">
-                                                                        {category.subcategories.length} subcategories
-                                                                    </p>
-                                                                )}
-                                                            </div>
-                                                        </div>
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                )}
+
                                 {item.hasDropdown && isHospitalityDropdownOpen && (
                                     <div className="absolute left-0 top-full pt-2 w-72 z-50">
-                                        <div className="bg-white border border-neutral-200 rounded-md shadow-lg py-2">
-                                            {hospitalityCategories.map((category) => (
+                                        <div className="bg-[#f0f0f0] border border-neutral-200 shadow-xl py-1">
+                                            {productDropdownItems.map((subItem) => (
                                                 <Link
-                                                    key={category.id}
-                                                    href={`/products/${category.slug}`}
-                                                    className="block px-6 py-3 text-sm text-neutral-600 hover:bg-neutral-50 hover:text-primary-600 font-medium transition-colors border-b border-neutral-50 last:border-0"
+                                                    key={subItem.label}
+                                                    href={subItem.href}
+                                                    className="block px-6 py-2.5 text-[15px] text-neutral-700 hover:bg-[#d4af37] hover:text-white transition-colors border-b border-neutral-200 last:border-0"
                                                     onClick={() => setIsHospitalityDropdownOpen(false)}
                                                 >
-                                                    {category.name}
+                                                    {subItem.label}
                                                 </Link>
                                             ))}
                                         </div>
