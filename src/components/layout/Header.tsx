@@ -126,43 +126,18 @@ export const Header: React.FC = () => {
                                     </div>
                                 )}
                                 {item.hasDropdown && isHospitalityDropdownOpen && (
-                                    <div className="absolute left-1/2 transform -translate-x-1/2 top-full pt-4 w-screen max-w-6xl">
-                                        <div className="bg-white border border-neutral-200 rounded-lg shadow-xl p-8">
-                                            <h3 className="text-lg font-bold text-neutral-900 mb-4">
-                                                Hotel Supply Categories
-                                            </h3>
-                                            <div className="grid grid-cols-3 gap-6">
-                                                {hospitalityCategories.map((category) => (
-                                                    <Link
-                                                        key={category.id}
-                                                        href={`/products/${category.slug}`}
-                                                        className="group"
-                                                        onClick={() => setIsHospitalityDropdownOpen(false)}
-                                                    >
-                                                        <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-neutral-50 transition-colors">
-                                                            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center flex-shrink-0 border border-neutral-200 p-1">
-                                                                <Image
-                                                                    src={getCategoryIcon(category.name)}
-                                                                    alt={category.name}
-                                                                    width={32}
-                                                                    height={32}
-                                                                    className="object-contain"
-                                                                />
-                                                            </div>
-                                                            <div>
-                                                                <h4 className="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">
-                                                                    {category.name}
-                                                                </h4>
-                                                                {category.subcategories && (
-                                                                    <p className="text-xs text-neutral-500 mt-1">
-                                                                        {category.subcategories.length} subcategories
-                                                                    </p>
-                                                                )}
-                                                            </div>
-                                                        </div>
-                                                    </Link>
-                                                ))}
-                                            </div>
+                                    <div className="absolute left-0 top-full pt-2 w-72 z-50">
+                                        <div className="bg-white border border-neutral-200 rounded-md shadow-lg py-2">
+                                            {hospitalityCategories.map((category) => (
+                                                <Link
+                                                    key={category.id}
+                                                    href={`/products/${category.slug}`}
+                                                    className="block px-6 py-3 text-sm text-neutral-600 hover:bg-neutral-50 hover:text-primary-600 font-medium transition-colors border-b border-neutral-50 last:border-0"
+                                                    onClick={() => setIsHospitalityDropdownOpen(false)}
+                                                >
+                                                    {category.name}
+                                                </Link>
+                                            ))}
                                         </div>
                                     </div>
                                 )}
