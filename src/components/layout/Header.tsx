@@ -16,8 +16,7 @@ export const Header: React.FC = () => {
     const totalItems = useQuoteCart((state) => state.getTotalItems());
     const categories = getCategories();
 
-    // Filter hospitality categories (exclude Engineering Solutions)
-    const hospitalityCategories = categories.filter(cat => cat.slug !== 'engineering-solutions');
+
 
     React.useEffect(() => {
         setMounted(true);
