@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
                     <div>
                         <h3 className="text-white text-xl font-bold mb-4">StepVision Hotel Supplies</h3>
                         <p className="text-sm mb-4">
-                            Your trusted partner for premium hotel supplies and hospitality solutions across the UAE.
+                            Your trusted partner for premium hotel supplies and Engineering solutions across Middle East and Africa.
                         </p>
                         <div className="space-y-2">
                             <div className="flex items-start space-x-2">
