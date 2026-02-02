@@ -26,9 +26,9 @@ export const Header: React.FC = () => {
     const navItems = [
         { label: 'Home', href: '/' },
         { label: 'About Us', href: '/about' },
-        { label: 'Products', href: '#', hasDropdown: true },
-        { label: 'Our Clients', href: '/#clients' }, // Placeholder anchor
-        { label: 'Contact Us', href: '/contact' },
+        { label: 'Hospitality Supplies', href: '/hospitality-supplies', hasDropdown: true },
+        { label: 'Engineering Solutions', href: '/engineering-solutions' },
+        { label: 'Contact', href: '/contact' },
     ];
 
     const productDropdownItems = [
@@ -149,17 +149,17 @@ export const Header: React.FC = () => {
                                             </button>
                                             {isMobileHospitalityOpen && (
                                                 <div className="bg-neutral-50 py-2 space-y-1">
-                                                    {hospitalityCategories.map((category) => (
+                                                    {productDropdownItems.map((subItem) => (
                                                         <Link
-                                                            key={category.id}
-                                                            href={`/products/${category.slug}`}
+                                                            key={subItem.label}
+                                                            href={subItem.href}
                                                             className="block text-neutral-400 hover:text-white text-sm px-8 py-2"
                                                             onClick={() => {
                                                                 setIsMobileMenuOpen(false);
                                                                 setIsMobileHospitalityOpen(false);
                                                             }}
                                                         >
-                                                            {category.name}
+                                                            {subItem.label}
                                                         </Link>
                                                     ))}
                                                 </div>
