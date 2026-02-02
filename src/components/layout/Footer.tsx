@@ -11,8 +11,6 @@ export const Footer: React.FC = () => {
         { label: 'Products', href: '/products' },
         { label: 'Why Choose Us', href: '/why-choose-us' },
         { label: 'Contact', href: '/contact' },
-        { label: 'Request Catalogue', href: '/request-catalogue' },
-        { label: 'Get a Quote', href: '/quote-cart' },
     ];
 
     const legalLinks = [
