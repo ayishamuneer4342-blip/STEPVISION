@@ -18,37 +18,39 @@ export default function HomePage() {
       {/* Hero Slider */}
       <HeroSlider />
 
-      {/* One Supplier — Multiple Needs (Moved from About & Restyled) */}
-      <section className="bg-neutral-900 py-12 border-b border-[#d4af37]/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-center text-[#d4af37]">
+      {/* One Supplier - Multiple Needs Section */}
+      <section className="py-12 bg-white">
+        <div className="container">
+          <div className="bg-[#a48922] rounded-2xl p-8 md:p-12 shadow-xl text-center text-white max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               One Supplier — Multiple Needs
-            </h3>
-            <p className="text-lg md:text-xl mb-10 text-neutral-300 text-center max-w-3xl mx-auto">
+            </h2>
+            <p className="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto">
               Reduce vendor count and simplify procurement with a partner who supports all your hospitality needs:
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-              <div className="flex items-center space-x-4 bg-black/40 border border-[#d4af37]/20 rounded-lg p-4 hover:border-[#d4af37]/50 transition-colors">
-                <CheckCircle className="w-7 h-7 text-[#d4af37] flex-shrink-0" />
-                <span className="text-lg font-medium text-white">Engineering products</span>
+
+            <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto text-left">
+              <div className="bg-white/10 rounded-lg p-4 flex items-center backdrop-blur-sm border border-white/20">
+                <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
+                <span className="font-semibold text-lg">Engineering products</span>
               </div>
-              <div className="flex items-center space-x-4 bg-black/40 border border-[#d4af37]/20 rounded-lg p-4 hover:border-[#d4af37]/50 transition-colors">
-                <CheckCircle className="w-7 h-7 text-[#d4af37] flex-shrink-0" />
-                <span className="text-lg font-medium text-white">Hospitality supplies</span>
+              <div className="bg-white/10 rounded-lg p-4 flex items-center backdrop-blur-sm border border-white/20">
+                <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
+                <span className="font-semibold text-lg">Hospitality supplies</span>
               </div>
-              <div className="flex items-center space-x-4 bg-black/40 border border-[#d4af37]/20 rounded-lg p-4 hover:border-[#d4af37]/50 transition-colors">
-                <CheckCircle className="w-7 h-7 text-[#d4af37] flex-shrink-0" />
-                <span className="text-lg font-medium text-white">F&B & kitchen essentials</span>
+              <div className="bg-white/10 rounded-lg p-4 flex items-center backdrop-blur-sm border border-white/20">
+                <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
+                <span className="font-semibold text-lg">F&B & kitchen essentials</span>
               </div>
-              <div className="flex items-center space-x-4 bg-black/40 border border-[#d4af37]/20 rounded-lg p-4 hover:border-[#d4af37]/50 transition-colors">
-                <CheckCircle className="w-7 h-7 text-[#d4af37] flex-shrink-0" />
-                <span className="text-lg font-medium text-white">Project & operations solutions</span>
+              <div className="bg-white/10 rounded-lg p-4 flex items-center backdrop-blur-sm border border-white/20">
+                <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
+                <span className="font-semibold text-lg">Project & operations solutions</span>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Introduction Block */}
       <section className="py-16 bg-neutral-50">
