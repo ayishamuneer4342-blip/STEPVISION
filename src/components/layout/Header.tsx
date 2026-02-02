@@ -15,7 +15,7 @@ export const Header: React.FC = () => {
     const [isMobileHospitalityOpen, setIsMobileHospitalityOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
     const totalItems = useQuoteCart((state) => state.getTotalItems());
-    // const categories = getCategories(); // Unused now
+    const categories = getCategories();
 
     // Filter hospitality categories (exclude Engineering Solutions)
     const hospitalityCategories = categories.filter(cat => cat.slug !== 'engineering-solutions');
