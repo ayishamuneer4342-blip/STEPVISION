@@ -2,39 +2,15 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { Menu, X, ShoppingCart, FileText, ChevronDown } from 'lucide-react';
-import { Button } from '../Button';
-import { useQuoteCart } from '@/store/useQuoteCart';
-import { getCategories } from '@/data/helpers';
-
-// Map category names to icon filenames
-const getCategoryIcon = (categoryName: string): string => {
-    const iconMap: Record<string, string> = {
-        'Tabletop & Dining': 'Tabletop & Dining.png',
-        'Kitchen & Catering': 'Kitchen & Catering.png',
-        'Housekeeping & Cleaning': 'Housekeeping & Cleaning.png',
-        'Guest Room Essentials': 'Guest Room Essentials.png',
-        'Front Office & Service': 'Front Office & Service.png',
-        'Engineering Products': 'Engineering Products.png',
-        'Stationery': 'Stationery.png',
-        'Gift Items': 'Gift Items.png',
-        'Party Items': 'Party Items.png',
-        'Furniture': 'furniture.png',
-        'Upholstery': 'Upholstery.png',
-        'Custom & Project Solutions': 'Custom & Project Solutions.png',
-    };
-    return `/icons/categories/${iconMap[categoryName] || 'Tabletop & Dining.png'}`;
-};
+// Map category names to icon filenames - REMOVED UNUSED FUNCTION
 
 export const Header: React.FC = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
     const [isHospitalityDropdownOpen, setIsHospitalityDropdownOpen] = useState(false);
     const [isMobileHospitalityOpen, setIsMobileHospitalityOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
     const totalItems = useQuoteCart((state) => state.getTotalItems());
-    const categories = getCategories();
+    // const categories = getCategories(); // Unused now
 
     // Filter hospitality categories (exclude Engineering Solutions)
     const hospitalityCategories = categories.filter(cat => cat.slug !== 'engineering-solutions');

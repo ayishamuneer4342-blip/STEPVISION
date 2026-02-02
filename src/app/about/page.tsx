@@ -1,6 +1,6 @@
 import React from 'react';
 import { Breadcrumb } from '@/components/Breadcrumb';
-import { CheckCircle, Building2, Users, Wrench, Package, Hotel, Utensils, Award, Globe, Clock, Shield } from 'lucide-react';
+import { Building2, Users, Wrench, Package, Hotel, Utensils, Award, Globe, Clock, Shield } from 'lucide-react';
 
 export default function AboutPage() {
     return (
