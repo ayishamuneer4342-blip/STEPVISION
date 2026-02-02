@@ -56,7 +56,7 @@ export default function HomePage() {
       <section className="py-16 bg-neutral-50">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left lg:text-center">
+            <div className="text-center">
               <h2 className="text-4xl font-bold text-neutral-900 mb-6">
                 Your Trusted Partner in Hospitality Excellence
               </h2>
