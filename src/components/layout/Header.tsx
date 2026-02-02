@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Menu, X, ShoppingCart, FileText, ChevronDown } from 'lucide-react';
 import { Button } from '../Button';
 import { useQuoteCart } from '@/store/useQuoteCart';
