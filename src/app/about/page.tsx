@@ -142,38 +142,7 @@ export default function AboutPage() {
                     </div>
                 </div>
 
-                {/* Why Choose Us */}
-                <div className="mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-8 text-center">
-                        Why Choose Us
-                    </h2>
-                    <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl shadow-xl p-10 md:p-14 text-white max-w-5xl mx-auto">
-                        <h3 className="text-3xl md:text-4xl font-bold mb-4 text-center">
-                            One Supplier — Multiple Needs
-                        </h3>
-                        <p className="text-lg md:text-xl mb-10 text-primary-50 text-center max-w-3xl mx-auto">
-                            Reduce vendor count and simplify procurement with a partner who supports all your hospitality needs:
-                        </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-                            <div className="flex items-center space-x-4 bg-white/10 rounded-lg p-4">
-                                <CheckCircle className="w-7 h-7 text-primary-200 flex-shrink-0" />
-                                <span className="text-lg font-medium">Engineering products</span>
-                            </div>
-                            <div className="flex items-center space-x-4 bg-white/10 rounded-lg p-4">
-                                <CheckCircle className="w-7 h-7 text-primary-200 flex-shrink-0" />
-                                <span className="text-lg font-medium">Hospitality supplies</span>
-                            </div>
-                            <div className="flex items-center space-x-4 bg-white/10 rounded-lg p-4">
-                                <CheckCircle className="w-7 h-7 text-primary-200 flex-shrink-0" />
-                                <span className="text-lg font-medium">F&B & kitchen essentials</span>
-                            </div>
-                            <div className="flex items-center space-x-4 bg-white/10 rounded-lg p-4">
-                                <CheckCircle className="w-7 h-7 text-primary-200 flex-shrink-0" />
-                                <span className="text-lg font-medium">Project & operations solutions</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
 
                 {/* Industries Served */}
                 <div className="mb-16">
