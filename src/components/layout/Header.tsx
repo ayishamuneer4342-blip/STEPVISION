@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Menu, X, ShoppingCart, FileText, ChevronDown } from 'lucide-react';
 import { Button } from '../Button';
 import { useQuoteCart } from '@/store/useQuoteCart';
-import { getCategories } from '@/data/helpers';
+
 // Map category names to icon filenames - REMOVED UNUSED FUNCTION
 
 export const Header: React.FC = () => {
@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
     const [isMobileHospitalityOpen, setIsMobileHospitalityOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
     const totalItems = useQuoteCart((state) => state.getTotalItems());
-    const categories = getCategories();
+
 
 
 

@@ -16,7 +16,10 @@ export default function EngineeringSolutionsPage() {
     const [currentPage, setCurrentPage] = useState(1);
 
     // Get products - safely handle missing category
-    const allCategoryProducts = category ? getProductsByCategoryId(category.id) : [];
+    const allCategoryProducts = useMemo(() =>
+        category ? getProductsByCategoryId(category.id) : [],
+        [category]
+    );
 
     const filteredProducts = useMemo(() => {
         if (selectedSubcategory) {
