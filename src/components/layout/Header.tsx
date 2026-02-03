@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
     const navItems = [
         { label: 'Home', href: '/' },
         { label: 'About Us', href: '/about' },
-        { label: 'Hospitality Supplies', href: '/hospitality-supplies', hasDropdown: true },
+        { label: 'Hotel Supplies', href: '/hospitality-supplies', hasDropdown: true },
         { label: 'Engineering Solutions', href: '/engineering-solutions' },
         { label: 'Contact', href: '/contact' },
     ];
